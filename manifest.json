@@ -5,8 +5,7 @@
   "background_color": "#fff",
   "display": "standalone",
   "orientation": "portrait",
-  "scope": "/web-pwa",
-  "start_url": "/",
+  "start_url": "/web-pwa",
   "icons": [
     {
       "src": "images/icons/icon-72x72.png",
