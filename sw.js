@@ -1,12 +1,12 @@
 const staticCacheName = 'site-static-v2'
 const assets = [
-    '/',
-    '/index.html',
-    '/app.js',
-    '/images/icon.png',
-    '/css/style.css',
-    '/images/icons/icon-128x128.png',
-    '/images/icons/icon-192x192.png'
+    '',
+    'index.html',
+    'app.js',
+    'images/icon.png',
+    'css/style.css',
+    'images/icons/icon-128x128.png',
+    'images/icons/icon-192x192.png'
 ]
 
 // событие install (вызывается при установке)
