@@ -1,4 +1,4 @@
-function Notification(imt) {
+function NotificationImt(imt) {
     const notifTitle = 'Калькулятор ИМТ';
 
     const options = {
@@ -6,7 +6,7 @@ function Notification(imt) {
         icon: 'images/icon.png',
     };
     new Notification(notifTitle, options);
-    setTimeout(Notification, 30000);
+    setTimeout(NotificationImt(imt), 30000);
 }
 
 
@@ -28,18 +28,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
         Notification.requestPermission().then((result) => {
             if (result === 'granted') {
-                randomNotification();
+                NotificationImt();
             }
         })
-        // регистрация serviceWorker
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('sw.js')
-                .then(registration => {
-                    console.log('SW registred', registration)
-                })
-                .catch(error => {
-                    console.log('SW failed', error)
-                })
-
-        }
     })
+    // регистрация serviceWorker
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('sw.js')
+            .then(registration => {
+                console.log('SW registred', registration)
+            })
+            .catch(error => {
+                console.log('SW failed', error)
+            })
+
+    }
+})
